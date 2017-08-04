@@ -48,7 +48,7 @@ Vue.use(VueNumber)
 
 ```vue
 <template>
-  <vue-number currency="$" separator="," v-model="price"></vue-number>
+  <vue-number currency="$" v-model="price"></vue-number>
 </template>
 
 <script>
@@ -78,60 +78,6 @@ adding currency prefix to the input by using `currency` props.
 <vue-number currency="$"></vue-number>
 ```
 
-### Minimum & maximum constraint
-
-Limit minimum and maximum input by using `min, max` props.
-
-- `min` default to `0`.
-- `min, max` accept `String` and `Number`.
-
-```vue
-<vue-number min="2000" v-bind:max="10000"></vue-number>
-```
-
-### Disable/enable minus value
-- `minus` default to `false`.
-
-```vue
-<vue-number v-bind:minus="false"></vue-number>
-```
-
-### Enable decimal value
-By default the decimal value is disabled, to use decimal value add `precision` props.
-- `precision` accept `String` and `Number` numeric value.
-
-```vue
-<vue-number v-bind:precision="2"></vue-number>
-```
-
-### Thousand separator
-- Default thousand separator's symbol is `,`.
-- Use `separator` props to change separator's symbol.
-- `separator` only accept either `,` or `.` value.
-- When using `.` separator symbol, to input decimal value use `,` and vice versa.
-
-```vue
-<vue-number separator="."></vue-number>
-```
-
-### Input placeholder when empty
-```vue
-<vue-number placeholder="only number allowed"></vue-number>
-```
-
-## Props
-|Props|Description|Required|Type|Default|
-|-----|-----------|--------|----|-------|
-|currency|Currency prefix|false|String|-|
-|currency-symbol-position|Position for the symbol|false|String|'prefix'|
-|max|Maximum value allowed|false|Number, String|-|
-|min|Minimum value allowed|false|Number, String|0|
-|minus|Enable/disable minus value|false|Boolean|false|
-|placeholder|Input placeholder|false|String|-|
-|precision|Number of decimals|false|Number, String|-|
-|separator|Thousand separator type ( accept either `.` or `,` )|false|String|,|
-|read-only|Hide input field and show the value in text|false|Boolean|false|
-|read-only-class|Class for read-only element|false|String|''|
 
 ## License
 
