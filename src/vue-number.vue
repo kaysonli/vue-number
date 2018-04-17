@@ -246,7 +246,10 @@ export default {
 
   mounted () {
     this.$refs.numeric.addEventListener('textInput', this.onTextInput.bind(this));
-    this.update(parseInt(this.value.replace(/,/g, "")));
+    if (typeof this.value === 'string' || this.value instanceof String) {
+        this.value.replace(/,/g, "");
+    }
+    this.update(parseInt(this.value));
   }
 }
 </script>
